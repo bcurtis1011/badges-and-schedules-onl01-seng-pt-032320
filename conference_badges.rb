@@ -15,6 +15,12 @@ def assign_rooms(attendees)
   end
 end
 
+def assign_rooms (attendees)
+  attendees.map.eith_index do |attendee, index|
+    "Hello, #{attendee}! You'll be assigned to room #{index+1}"
+  end
+end
+
 def assign_rooms(array)
   array.each_with_index do |assigned, index|
     array[array.index(assigned)] = "Hello, #{assigned}! You'll be assigned to room #{index+1}!"
